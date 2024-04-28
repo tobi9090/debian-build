@@ -1,0 +1,5 @@
+.tags
+.version_stamp
+.*.sw?
+build
+.luacheckcache
