@@ -1,0 +1,344 @@
+'\" t
+.\"     Title: awesome
+.\"    Author: [see the "AUTHOR(S)" section]
+.\" Generator: Asciidoctor 2.0.18
+.\"      Date: 2024-02-06
+.\"    Manual: \ \&
+.\"    Source: \ \&
+.\"  Language: English
+.\"
+.TH "AWESOME" "1" "2024-02-06" "\ \&" "\ \&"
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
+.ss \n[.ss] 0
+.nh
+.ad l
+.de URL
+\fI\\$2\fP <\\$1>\\$3
+..
+.als MTO URL
+.if \n[.g] \{\
+.  mso www.tmac
+.  am URL
+.    ad l
+.  .
+.  am MTO
+.    ad l
+.  .
+.  LINKSTYLE blue R < >
+.\}
+.SH "NAME"
+awesome \- awesome Fenstermanager
+.SH "SYNTAX"
+.sp
+\fBawesome\fP [\fB\-v\fP | \fB\-\-version\fP] [\fB\-h\fP | \fB\-\-help\fP] [\fB\-c\fP | \fB\-\-config\fP \fIDatei\fP] [\fB\-k\fP | \fB\-\-check\fP] [\fB\-\-search\fP \fIVerzeichnis\fP] [\fB\-a\fP | \fB\-\-no\-argb\fP] [\fB\-r\fP | *\-\-replace]
+.SH "BESCHREIBUNG"
+.sp
+\fBawesome\fP ist ein Fenstermanager für X. Er verwaltet Fenster in verschiedenen Anordnungen, wie etwa überlappend oder geteilt. Jede Anordnung kann dynamisch angewendet werden, wodurch eine optimale Anpassung an die aktuelle Anwendung und die entsprechende Tätigkeit vorgenommen werden kann.
+.sp
+In einer geteilten Anordnung werden Fenster in einer Haupt\- und einer Stackanordnung abgebildet. Das Hauptfenster ist das Fenster, welches die meiste Aufmerksamkeit benötigt, hingegen beinhaltet der Stack alle weiteren Fenster. In einer überlappenden Anordnung können Fenster beliebig vergrößert und verschoben werden. Dialog\-Fenster werden immer als überlappend behandelt, unabhängig von der aktuellen Anordnung. Die spiralförmige und die vermindernde Anordnung sind Spezialfälle der geteilten Anordnung, wobei die Stack\-Fläche als Spirale für die obersten oder als rechteckiges Fraktal für die untersten dient.
+.sp
+Fenster sind durch Bezeichner (Tags) in awesome gruppiert. Jedes Fenster kann mit einem oder mehreren Bezeichnern versehen werden. Bei der Auswahl eines Bezeichners werden dabei alle Fenster angezeigt, die mit diesem Bezeichner markiert wurden.
+.sp
+\fBawesome\fP kann kleine Wiboxes beinhalten, welche zur Anzeige von beliebigen Inhalt dienen können, wie etwa:
+Alle verfügbaren Bezeichner, die aktuelle Anordnung, der Titel eines sichtbaren Fenster, Text, etc.
+.SH "OPTIONEN"
+.sp
+\fB\-v\fP, \fB\-\-version\fP
+.RS 4
+Gibt die Versionsinformationen auf der Standard\-Ausgabe aus.
+.RE
+.sp
+\fB\-h\fP, \fB\-\-help\fP
+.RS 4
+Gibt die Hilfe aus.
+.RE
+.sp
+\fB\-c\fP, \fB\-\-config\fP \fIDatei\fP
+.RS 4
+Nutzung einer alternativen Konfigurationsdatei, statt \fI$XDG_CONFIG_HOME/awesome/rc.lua\fP.
+.RE
+.sp
+\fB\-k\fP, \fB\-\-check\fP
+.RS 4
+Überprüft die Konfigurationsdatei auf Syntaxfehler.
+.RE
+.sp
+\fB\-\-search\fP
+.RS 4
+Füge ein Verzeichnis zum Bibliothekssuchpfad hinzu.
+.RE
+.sp
+\fB\-a\fP, \fB\-\-no\-argb\fP
+.RS 4
+Verwende keine ARGB\-Visuals
+.RE
+.sp
+\fB\-r\fP, \fB\-\-replace\fP
+.RS 4
+Existierenden Fenstermanager ersetzen.
+.RE
+.SH "TASTENBELEGUNG FÜR MAUSZEIGER"
+.SS "Navigation"
+.sp
+\fBButton1\fP auf Bezeichner
+.RS 4
+Bezeichner anzeigen.
+.RE
+.sp
+\fBButton4\fP, \fBButton5\fP auf Bezeichner
+.RS 4
+Wechsel zum vorhergehenden oder nächsten Bezeichner.
+.RE
+.sp
+\fBButton4\fP, \fBButton5\fP auf Root\-Fenster
+.RS 4
+Wechsel zum vorhergehenden oder nächsten Bezeichner.
+.RE
+.sp
+\fBButton1\fP, \fBButton3\fP, \fBButton4\fP, \fBButton5\fP auf Anordnungssymbol
+.RS 4
+Wechsel zur vorhergehenden oder nächsten Anordnung.
+.RE
+.SS "Veränderung der Anordnung"
+.sp
+\fBMod4 + Button1\fP auf Bezeichner
+.RS 4
+Aktuelles Fenster nur mit diesem Bezeichner markieren.
+.RE
+.sp
+\fBMod4 + Button3\fP auf Bezeichner
+.RS 4
+Wechsel des Bezeichners für das aktuelle Fenster.
+.RE
+.sp
+\fBButton3\fP auf Bezeichner
+.RS 4
+Bezeichner in die aktuelle Ansicht mit aufnehmen.
+.RE
+.sp
+\fBMod4 + Button1\fP auf Fenster
+.RS 4
+Fenster bewegen.
+.RE
+.sp
+\fBMod4 + Button3\fP auf Fenster
+.RS 4
+Fenster vergrößern.
+.RE
+.SH "TASTENKÜRZEL"
+.SS "Hilfe"
+.sp
+\fBMod4 + s\fP
+.RS 4
+Zeige aktuell konfigurierte Tastenkürzel an.
+.RE
+.SS "Fenstermanager kontrollieren"
+.sp
+\fBMod4 + Control + r\fP
+.RS 4
+\fBawesome\fP neu starten.
+.RE
+.sp
+\fBMod4 + Shift + q\fP
+.RS 4
+\fBawesome\fP beenden.
+.RE
+.sp
+\fBMod4 + r\fP
+.RS 4
+Eingabeaufforderung.
+.RE
+.sp
+\fBMod4 + x\fP
+.RS 4
+Lua\-Code Eingabeaufforderung.
+.RE
+.sp
+\fBMod4 + Return\fP
+.RS 4
+Konsolenemulator starten.
+.RE
+.sp
+\fBMod4 + w\fP
+.RS 4
+Hauptmenü öffnen.
+.RE
+.SS "Fenster"
+.sp
+\fBMod4 + m\fP
+.RS 4
+Fenster maximieren.
+.RE
+.sp
+\fBMod4 + n\fP
+.RS 4
+Fenster minimieren.
+.RE
+.sp
+\fBMod4 + Control + n\fP
+.RS 4
+Fenster wiederherstellen.
+.RE
+.sp
+\fBMod4 + f\fP
+.RS 4
+Fenster auf Vollbild setzen.
+.RE
+.sp
+\fBMod4 + Shift + c\fP
+.RS 4
+Aktuelles Fenster beenden.
+.RE
+.sp
+\fBMod4 + t\fP
+.RS 4
+Fenster auf oberste Ebene setzen.
+.RE
+.SS "Navigation"
+.sp
+\fBMod4 + j\fP
+.RS 4
+Fokus auf das nächste Fenster legen.
+.RE
+.sp
+\fBMod4 + k\fP
+.RS 4
+Fokus auf das vorhergehende Fenster legen.
+.RE
+.sp
+\fBMod4 + u\fP
+.RS 4
+Fokus auf das erste dringliche Fenster legen.
+.RE
+.sp
+\fBMod4 + Left\fP
+.RS 4
+Anzeige des vorhergehenden Bezeichners.
+.RE
+.sp
+\fBMod4 + Right\fP
+.RS 4
+Anzeige des nächsten Bezeichners.
+.RE
+.sp
+\fBMod4 + 1\-9\fP
+.RS 4
+Wechsel zwischen den Bezeichnern 1\-9.
+.RE
+.sp
+\fBMod4 + Control + j\fP
+.RS 4
+Fokus auf den nächsten Bildschirm legen.
+.RE
+.sp
+\fBMod4 + Control + k\fP
+.RS 4
+Fokus auf den vorhergehenden Bildschirm legen.
+.RE
+.sp
+\fBMod4 + Escape\fP
+.RS 4
+Fokus auf den zuvor gewählten Bezeichner legen.
+.RE
+.SS "Anordnungsänderung"
+.sp
+\fBMod4 + Shift + j\fP
+.RS 4
+Wechsel zwischen aktuellem und nächstem Fenster
+.RE
+.sp
+\fBMod4 + Shift + k\fP
+.RS 4
+Wechsel zwischen aktuellem und vorhergehenden Fenster.
+.RE
+.sp
+\fBMod4 + o\fP
+.RS 4
+Verschiebe Fenster auf den nächsten Bildschirm.
+.RE
+.sp
+\fBMod4 + h\fP
+.RS 4
+Erniedrige Breite des Hauptfensters um 5%.
+.RE
+.sp
+\fBMod4 + l\fP
+.RS 4
+Erhöhe die Breite des Hauptfensters um 5%.
+.RE
+.sp
+\fBMod4 + Shift + h\fP
+.RS 4
+Erhöhe die Anzahl der Hauptfenster um 1.
+.RE
+.sp
+\fBMod4 + Shift + l\fP
+.RS 4
+Erniedrige die Anzahl der Hauptfenster um 1.
+.RE
+.sp
+\fBMod4 + Control + h\fP
+.RS 4
+Erhöhe die Anzahl der Spalten für Nicht\-Hauptfenster um 1.
+.RE
+.sp
+\fBMod4 + Control + l\fP
+.RS 4
+Erniedrige die Anzahl der Spalten für Nicht\-Hauptfenster um 1.
+.RE
+.sp
+\fBMod4 + space\fP
+.RS 4
+Wechsel zur nächsten Anordnung.
+.RE
+.sp
+\fBMod4 + Shift + space\fP
+.RS 4
+Wechsel zur vorhergehenden Anordnung.
+.RE
+.sp
+\fBMod4 + Control + space\fP
+.RS 4
+Überlappen aktivieren/deaktivieren.
+.RE
+.sp
+\fBMod4 + Control + Return\fP
+.RS 4
+Wechsel des Haupt mit dem Stack\-Fenster.
+.RE
+.sp
+\fBMod4 + Control + 1\-9\fP
+.RS 4
+Wechsel der Bezeichneransicht.
+.RE
+.sp
+\fBMod4 + Shift + 1\-9\fP
+.RS 4
+Markiere Fenster mit Bezeichner.
+.RE
+.sp
+\fBMod4 + Shift + Control + 1\-9\fP
+.RS 4
+Wechsel des Bezeichners des Fensters.
+.RE
+.SH "ANPASSUNG"
+.sp
+\fBawesome\fP kann durch die Erstellung einer \fI$XDG_CONFIG_HOME/awesome/rc.lua\fP Konfigurationsdatei angepasst werden.
+.SH "SIGNALE"
+.sp
+\fBawesome\fP kann durch das senden eines SIGHUP neu gestartet werden.
+.SH "SIEHE AUCH"
+.sp
+\fBawesomerc\fP(5) \fBawesome\-client\fP(1)
+.SH "FEHLER"
+.sp
+Natürlich gibt es keine Fehler in \fBawesome\fP. Dennoch können unerwartete Ereignisse auftreten.
+.SH "AUTOREN"
+.sp
+Julien Danjou \c
+.MTO "julien\(atdanjou.info" "" ""
+und andere.
+.SH "WWW"
+.sp
+.URL "https://awesomewm.org" "" ""

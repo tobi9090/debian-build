@@ -1,0 +1,9 @@
+Architecture: amd64
+Description: A tiling window manager
+Maintainer: devnull@example.com
+Package: awesome
+Priority: optional
+Section: devel
+Version: 4.3.0.0~git1647-ge6f5c798
+Installed-Size: 40073
+

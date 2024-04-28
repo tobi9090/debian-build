@@ -1,0 +1,109 @@
+'\" t
+.\"     Title: awesomerc
+.\"    Author: [see the "AUTHOR(S)" section]
+.\" Generator: Asciidoctor 2.0.18
+.\"      Date: 2024-02-06
+.\"    Manual: \ \&
+.\"    Source: \ \&
+.\"  Language: English
+.\"
+.TH "AWESOMERC" "5" "2024-02-06" "\ \&" "\ \&"
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
+.ss \n[.ss] 0
+.nh
+.ad l
+.de URL
+\fI\\$2\fP <\\$1>\\$3
+..
+.als MTO URL
+.if \n[.g] \{\
+.  mso www.tmac
+.  am URL
+.    ad l
+.  .
+.  am MTO
+.    ad l
+.  .
+.  LINKSTYLE blue R < >
+.\}
+.SH "ИМЯ"
+awesomerc \- конфигурационный файл для потрясающего оконного менеджера
+.SH "СИНОПСИС"
+.sp
+\fBawesome\fP ищет конфигурационный файл в следующих местах по порядку:
+.sp
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.  sp -1
+.  IP \(bu 2.3
+.\}
+$XDG_CONFIG_HOME/awesome/rc.lua
+.RE
+.sp
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.  sp -1
+.  IP \(bu 2.3
+.\}
+$HOME/.config/awesome/rc.lua
+.RE
+.sp
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.  sp -1
+.  IP \(bu 2.3
+.\}
+$XDG_CONFIG_DIRS/awesome/rc.lua
+.RE
+.SH "ОПИСАНИЕ"
+.sp
+Файл \fBrc.lua\fP содержит конфигурационную информацию для \fBawesome\fP. Его можно
+использовать для настройки поведения и внешнего вида awesome множеством
+способов. Его можно рассматривать как скрипт или программу на Lua, которую
+\fBawesome\fP выполняет при запуске. Следовательно в нём надо использовать Lua API,
+предоставляемый awesome. Lua API описан в разделе API. Этот файл читается при
+запуске.
+.SH "AWESOME LUA API"
+.sp
+Документацию по Lua API можно посмотреть в каталоге luadoc.
+.SH "ФОРМАТ ЦВЕТОВ"
+.sp
+Цвета в \fBawesome\fP можно описывать либо по их X\-именами (blue, darkblue,
+lightred, и т. д.) или по шестнадцатеричному представлению (#rrggbb или
+#rrggbbaa).
+В шестнадцатеричном виде вы можете задавать альфа\-канал, то есть #00ff00 даст
+чистый зелёный цвет, а #00ff00aa со значением альфа\-канала «aa» смешает зелёный
+с цветом фона.
+.SH "ФОРМАТ ТЕКСТА"
+.sp
+Для форматирования текста вы можете использовать размету Pango. Таким образом
+можно получить отформатированный текст в виджетах. Документацию по
+Pango\-разметке можно посмотреть здесь:
+.URL "https://developer.gnome.org/pango/stable/pango\-Markup.html" "" "."
+.sp
+Пример Pango\-разметки: <span weight="bold" foreground="#336699">...</span>.
+.SH "СМОТРИ ТАКЖЕ"
+.sp
+awesome(1) awesome\-client(1)
+.SH "АВТОРЫ"
+.sp
+Оригинал написан Julien Danjou \c
+.MTO "julien\(atdanjou.info" "" "."
+.SH "WWW"
+.sp
+.URL "https://awesomewm.org" "" ""
+.SH "ПЕРЕВОД"
+.sp
+Это руководство переведено на русский язык Константином Степановым \c
+.MTO "kstep\(atp\-nut.info" "" ""
+13 апреля 2011 года.

@@ -1,0 +1,109 @@
+'\" t
+.\"     Title: awesomerc
+.\"    Author: [see the "AUTHOR(S)" section]
+.\" Generator: Asciidoctor 2.0.18
+.\"      Date: 2024-02-06
+.\"    Manual: \ \&
+.\"    Source: \ \&
+.\"  Language: English
+.\"
+.TH "AWESOMERC" "5" "2024-02-06" "\ \&" "\ \&"
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
+.ss \n[.ss] 0
+.nh
+.ad l
+.de URL
+\fI\\$2\fP <\\$1>\\$3
+..
+.als MTO URL
+.if \n[.g] \{\
+.  mso www.tmac
+.  am URL
+.    ad l
+.  .
+.  am MTO
+.    ad l
+.  .
+.  LINKSTYLE blue R < >
+.\}
+.SH "NOME"
+awesomerc \- File di configurazione per il gestore di finestre awesome
+.SH "SINOSSI"
+.sp
+\fBawesome\fP cerca un file di configurazione nel seguente ordine:
+.sp
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.  sp -1
+.  IP \(bu 2.3
+.\}
+$XDG_CONFIG_HOME/awesome/rc.lua
+.RE
+.sp
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.  sp -1
+.  IP \(bu 2.3
+.\}
+$HOME/.config/awesome/rc.lua
+.RE
+.sp
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.  sp -1
+.  IP \(bu 2.3
+.\}
+$XDG_CONFIG_DIRS/awesome/rc.lua
+.RE
+.SH "DESCRIZIONE"
+.sp
+Il file \fBrc.lua\fP contiene informazione di configurazione per \fBawesome\fP.
+Può essere utilizzato per configurare il comportamento e l\(cqaspetto di
+awesome in vari modi. Può essere assimilato a un programma/script Lua
+eseguito all\(cqavvio da \fBawesome\fP. Perciò, dovrebbe usare l\(cqAPI Lua di
+awesome descritta nella sezione API.
+Questo file è letto all\(cqavvio.
+.SH "API LUA DI AWESOME"
+.sp
+La documentazione per l\(cqAPI Lua può essere trovata nella directory luadoc.
+.SH "FORMATO COLORI"
+.sp
+Il formato dei colori in \fBawesome\fP è o un nome colore standard di X
+(come blue, darkblue, lightred, ecc.) o un colore in formato esadecimale
+(#rrggbb o #rrggbbaa).
+Usando il formato esadecimale, si può anche specificare un canale alpha:
+ciò significa che #00ff00 disegnerà un verde puro, ma #00ff00aa
+imposterà il canale alpha a \(oqaa\(cq e mescolerà il verde con il colore
+sottostante.
+.SH "FORMATO TESTI"
+.sp
+Si possono usare le marcature (makup) Pango in una stringa di testo.
+Questo consente di formattare il testo generato dentro i widgets.
+La documentazione per i markup Pango può essere trovata nella
+documentazione Pango a
+.URL "https://developer.gnome.org/pango/stable/pango\-Markup.html" "" "."
+.sp
+Un esempio di un markup Pango: <span weight="bold" foreground="#336699">...</span>.
+.SH "VEDI ANCHE"
+.sp
+awesome(1) awesome\-client(1)
+.SH "AUTORI"
+.sp
+Scritto da Julien Danjou \c
+.MTO "julien\(atdanjou.info" "" "."
+.SH "WWW"
+.sp
+.URL "https://awesomewm.org" "" ""
+.SH "TRADUZIONE"
+.sp
+Questa pagina di manuale è stata tradotta da Gianluca Fiore.

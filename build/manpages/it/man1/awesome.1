@@ -1,0 +1,367 @@
+'\" t
+.\"     Title: awesome
+.\"    Author: [see the "AUTHOR(S)" section]
+.\" Generator: Asciidoctor 2.0.18
+.\"      Date: 2024-02-06
+.\"    Manual: \ \&
+.\"    Source: \ \&
+.\"  Language: English
+.\"
+.TH "AWESOME" "1" "2024-02-06" "\ \&" "\ \&"
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
+.ss \n[.ss] 0
+.nh
+.ad l
+.de URL
+\fI\\$2\fP <\\$1>\\$3
+..
+.als MTO URL
+.if \n[.g] \{\
+.  mso www.tmac
+.  am URL
+.    ad l
+.  .
+.  am MTO
+.    ad l
+.  .
+.  LINKSTYLE blue R < >
+.\}
+.SH "NOME"
+awesome \- gestore di finestre awesome
+.SH "SINOSSI"
+.sp
+\fBawesome\fP [\fB\-v\fP | \fB\-\-version\fP] [\fB\-h\fP | \fB\-\-help\fP] [\fB\-c\fP | \fB\-\-config\fP \fIFILE\fP] [\fB\-k\fP | \fB\-\-check\fP] [\fB\-\-search\fP \fIDIRECTORY\fP] [\fB\-a\fP | \fB\-\-no\-argb\fP] [\fB\-r\fP | *\-\-replace]
+.SH "DESCRIZIONE"
+.sp
+\fBawesome\fP è un gestore di finestre per X. Gestisce le finestre con differenti
+schemi (layouts), come floating o tiled. Qualsiasi schema può essere applicato
+dinamicamente, ottimizzando l\(cqambiente per l\(cqapplicazione in uso e il compito
+correntemente eseguito.
+.sp
+In uno schema tiled, le finestre sono gestite in un\(cqarea principale (master) e
+in una impilabile (stacking). L\(cqarea principale contiene le finestre che
+necessitano della maggiore attenzione, laddove invece l\(cqarea impilabile
+contiente tutte le altre. In uno schema floating le finestre possono essere
+ridimensionate e mosse liberamente. Le finestre di dialogo sono sempre gestite
+come floating, a prescindere dello schema correntemente applicato. Gli schemi
+a spirale e calante (dwindle) sono casi speciali dell\(cqimpilabile dove l\(cqarea
+impilabile è impostata in una spirale per il primo o in un frattale
+rettangolare per il secondo.
+.sp
+Le finestre sono raggruppate per etichette (tags) in awesome. Ognuna può
+essere etichettata con una o più etichette. Selezionando certe etichette si
+visualizzano tutte le finestre con le stesse.
+.sp
+\fBawesome\fP può contenere piccoli wiboxes che possono mostrare qualsiasi valore:
+tutte le etichette disponibili, lo schema (layout) corrente, i titoli delle
+finestre visibili, testo, e ecc..
+.SH "OPZIONI"
+.sp
+\fB\-v\fP, \fB\-\-version\fP
+.RS 4
+Mostra informazioni sulla versione sull\(cquscita standard, e esce dal
+programma.
+.RE
+.sp
+\fB\-h\fP, \fB\-\-help\fP
+.RS 4
+Mostra informazioni di aiuto, e esce dal programma.
+.RE
+.sp
+\fB\-c\fP, \fB\-\-config\fP \fIFILE\fP
+.RS 4
+Usa un file di configurazione alternativo invece di
+\fI$XDG_CONFIG_HOME/awesome/rc.lua\fP.
+.RE
+.sp
+\fB\-k\fP, \fB\-\-check\fP
+.RS 4
+Verifica la sintassi del file di configurazione.
+.RE
+.sp
+\fB\-\-search\fP
+.RS 4
+Aggiungere una directory al percorso di ricerca della libreria.
+.RE
+.sp
+\fB\-a\fP, \fB\-\-no\-argb\fP
+.RS 4
+Non usare visuali ARGB.
+.RE
+.sp
+\fB\-r\fP, \fB\-\-replace\fP
+.RS 4
+Sostituisci un gestore di finestre esistente.
+.RE
+.SH "DEFAULT SCORCIATOIE CON IL MOUSE"
+.SS "Navigazione"
+.sp
+\fBTasto1\fP sul nome di un\(cqetichetta
+.RS 4
+Mostra l\(cqetichetta.
+.RE
+.sp
+\fBTasto4\fP, \fBTasto5\fP sul nome di un\(cqetichetta
+.RS 4
+Passa all\(cqetichetta precedente o seguente.
+.RE
+.sp
+\fBTasto4\fP, \fBTasto5\fP sulla finestra principale
+.RS 4
+Passa all\(cqetichetta precedente o seguente.
+.RE
+.sp
+\fBTasto1\fP, \fBTasto3\fP, \fBTasto4\fP, \fBTasto5\fP sul simbolo di uno schema (layout)
+.RS 4
+Passa allo schema precedente o seguente.
+.RE
+.SS "Modifica dello schema"
+.sp
+\fBMod4 + Tasto1\fP sul nome di un\(cqetichetta
+.RS 4
+Etichetta il cliente attuale con solo questa etichetta.
+.RE
+.sp
+\fBMod4 + Tasto3\fP sul nome di un\(cqetichetta
+.RS 4
+Attiva o disattiva questa etichetta per il cliente.
+.RE
+.sp
+\fBTasto3\fP sul nome di un\(cqetichetta
+.RS 4
+Aggiungi questa etichetta alla vista corrente.
+.RE
+.sp
+\fBMod4 + Tasto1\fP su una finestra cliente
+.RS 4
+Muove la finestra.
+.RE
+.sp
+\fBMod4 + Tasto3\fP su una finestra cliente
+.RS 4
+Ridimensiona la finestra.
+.RE
+.SH "DEFAULT SCORCIATOIE DA TASTIERA"
+.SS "Help"
+.sp
+\fBMod4 + s\fP
+.RS 4
+Show currently assigned key bindings.
+.RE
+.SS "Controllo del gestore di finestre"
+.sp
+\fBMod4 + Control + r\fP
+.RS 4
+Riavvia \fBawesome\fP.
+.RE
+.sp
+\fBMod4 + Shift + q\fP
+.RS 4
+Esce da \fBawesome\fP.
+.RE
+.sp
+\fBMod4 + r\fP
+.RS 4
+Esegue una linea di comando nella barra di stato.
+.RE
+.sp
+\fBMod4 + x\fP
+.RS 4
+Esegue una linea di comando per eseguire codice Lua nella barra di stato.
+.RE
+.sp
+\fBMod4 + Invio\fP
+.RS 4
+Lancia un emulatore di terminale.
+.RE
+.sp
+\fBMod4 + w\fP
+.RS 4
+Apre il menù principale.
+.RE
+.SS "Clienti"
+.sp
+\fBMod4 + m\fP
+.RS 4
+Massimizza il cliente.
+.RE
+.sp
+\fBMod4 + n\fP
+.RS 4
+Minimizza il cliente.
+.RE
+.sp
+\fBMod4 + Control + n\fP
+.RS 4
+Ripristina il cliente.
+.RE
+.sp
+\fBMod4 + f\fP
+.RS 4
+Attiva o disattiva la modalità a tutto schermo per il cliente attuale.
+.RE
+.sp
+\fBMod4 + Shift + c\fP
+.RS 4
+Termina (kill) il cliente attuale.
+.RE
+.sp
+\fBMod4 + t\fP
+.RS 4
+Attiva o disattiva la modalità "sempre visibile" (on top) per il cliente
+attuale.
+.RE
+.SS "Navigazione"
+.sp
+\fBMod4 + j\fP
+.RS 4
+Passa il focus al cliente seguente.
+.RE
+.sp
+\fBMod4 + k\fP
+.RS 4
+Passa il focus al cliente precedente.
+.RE
+.sp
+\fBMod4 + u\fP
+.RS 4
+Passa il focusa al primo cliente urgente.
+.RE
+.sp
+\fBMod4 + Left\fP
+.RS 4
+Mostra l\(cqetichetta precedente.
+.RE
+.sp
+\fBMod4 + Right\fP
+.RS 4
+Mostra l\(cqetichetta seguente.
+.RE
+.sp
+\fBMod4 + 1\-9\fP
+.RS 4
+Passa all\(cqetichetta 1\-9.
+.RE
+.sp
+\fBMod4 + Control + j\fP
+.RS 4
+Passa il focus allo schermo seguente.
+.RE
+.sp
+\fBMod4 + Control + k\fP
+.RS 4
+Passa il focus allo schermo precedente.
+.RE
+.sp
+\fBMod4 + Escape\fP
+.RS 4
+Passa il focus alle etichette precedentemente selezionate.
+.RE
+.SS "Modifica dello schema"
+.sp
+\fBMod4 + Shift + j\fP
+.RS 4
+Scambia il cliente corrente con il seguente.
+.RE
+.sp
+\fBMod4 + Shift + k\fP
+.RS 4
+Scambia il cliente corrente con il precedente.
+.RE
+.sp
+\fBMod4 + o\fP
+.RS 4
+Invia il cliente allo schermo seguente.
+.RE
+.sp
+\fBMod4 + h\fP
+.RS 4
+Diminuisce il fattore di larghezza dell\(cqarea principale del 5%.
+.RE
+.sp
+\fBMod4 + l\fP
+.RS 4
+Incrementa il fattore di larghezza dell\(cqarea principale del 5%.
+.RE
+.sp
+\fBMod4 + Shift + h\fP
+.RS 4
+Incrementa il numero di finestre nell\(cqarea principale di 1.
+.RE
+.sp
+\fBMod4 + Shift + l\fP
+.RS 4
+Diminuisce il numero di finestre nell\(cqarea principale di 1.
+.RE
+.sp
+\fBMod4 + Control + h\fP
+.RS 4
+Aumenta il numero di colonne per le finestre nell\(cqarea di impilamento di
+1.
+.RE
+.sp
+\fBMod4 + Control + l\fP
+.RS 4
+Diminuisce il numero di colonne per le finestre nell\(cqarea di impilamento
+di 1.
+.RE
+.sp
+\fBMod4 + spazio\fP
+.RS 4
+Passa allo schema seguente.
+.RE
+.sp
+\fBMod4 + Shift + spazio\fP
+.RS 4
+Passa allo schema precedente.
+.RE
+.sp
+\fBMod4 + Control + spazio\fP
+.RS 4
+Attiva o disattiva lo stato floating del cliente attuale.
+.RE
+.sp
+\fBMod4 + Control + Invio\fP
+.RS 4
+Scambia il cliente attuale con quello nell\(cqarea principale.
+.RE
+.sp
+\fBMod4 + Control + 1\-9\fP
+.RS 4
+Attiva o disattiva la vista dell\(cqetichetta 1\-9.
+.RE
+.sp
+\fBMod4 + Shift + 1\-9\fP
+.RS 4
+Etichetta il cliente con il tag 1\-9.
+.RE
+.sp
+\fBMod4 + Shift + Control + 1\-9\fP
+.RS 4
+Attiva o disattiva l\(cqetichetta per il cliente attuale.
+.RE
+.SH "PERSONALIZZAZIONE"
+.sp
+\fBawesome\fP si può personalizzare tramite il file \fI$XDG_CONFIG_HOME/awesome/rc.lua\fP.
+.SH "SEGNALI"
+.sp
+\fBawesome\fP può essere riavviato inviandogli il segnale SIGHUP.
+.SH "VEDI ANCHE"
+.sp
+\fBawesomerc\fP(5) \fBawesome\-client\fP(1)
+.SH "BUGS"
+.sp
+Ovviamente non vi sono bug in \fBawesome\fP. Ma vi possono essere comportamenti
+inattesi.
+.SH "AUTORI"
+.sp
+Julien Danjou \c
+.MTO "julien\(atdanjou.info" "" ""
+e altri.
+.SH "WWW"
+.sp
+.URL "https://awesomewm.org" "" ""
+.SH "TRADUZIONE"
+.sp
+Questa pagina di manuale è stata tradotta da Gianluca Fiore.

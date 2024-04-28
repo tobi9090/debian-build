@@ -1,0 +1,1 @@
+/usr/bin/cc -rdynamic "CMakeFiles/lgi-check.dir/build-utils/lgi-check.c.o" -o lgi-check  -llua5.3 -lm 

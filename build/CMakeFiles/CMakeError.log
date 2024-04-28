@@ -1,0 +1,34 @@
+Determining if the round exist failed with the following output:
+Change Dir: /home/tobias/awesome/build/CMakeFiles/CMakeScratch/TryCompile-i5DW29
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_2dd98/fast && gmake[1]: Entering directory '/home/tobias/awesome/build/CMakeFiles/CMakeScratch/TryCompile-i5DW29'
+/usr/bin/gmake  -f CMakeFiles/cmTC_2dd98.dir/build.make CMakeFiles/cmTC_2dd98.dir/build
+gmake[2]: Entering directory '/home/tobias/awesome/build/CMakeFiles/CMakeScratch/TryCompile-i5DW29'
+Building C object CMakeFiles/cmTC_2dd98.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_2dd98.dir/CheckSymbolExists.c.o -c /home/tobias/awesome/build/CMakeFiles/CMakeScratch/TryCompile-i5DW29/CheckSymbolExists.c
+Linking C executable cmTC_2dd98
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2dd98.dir/link.txt --verbose=1
+/usr/bin/cc -rdynamic CMakeFiles/cmTC_2dd98.dir/CheckSymbolExists.c.o -o cmTC_2dd98 
+/usr/bin/ld: CMakeFiles/cmTC_2dd98.dir/CheckSymbolExists.c.o: in function `main':
+CheckSymbolExists.c:(.text+0x1b): undefined reference to `round'
+collect2: error: ld returned 1 exit status
+gmake[2]: *** [CMakeFiles/cmTC_2dd98.dir/build.make:99: cmTC_2dd98] Error 1
+gmake[2]: Leaving directory '/home/tobias/awesome/build/CMakeFiles/CMakeScratch/TryCompile-i5DW29'
+gmake[1]: *** [Makefile:127: cmTC_2dd98/fast] Error 2
+gmake[1]: Leaving directory '/home/tobias/awesome/build/CMakeFiles/CMakeScratch/TryCompile-i5DW29'
+
+
+File CheckSymbolExists.c:
+/* */
+#include <math.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef round
+  return ((int*)(&round))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}

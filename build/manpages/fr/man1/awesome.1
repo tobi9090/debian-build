@@ -1,0 +1,371 @@
+'\" t
+.\"     Title: awesome
+.\"    Author: [see the "AUTHOR(S)" section]
+.\" Generator: Asciidoctor 2.0.18
+.\"      Date: 2024-02-06
+.\"    Manual: \ \&
+.\"    Source: \ \&
+.\"  Language: English
+.\"
+.TH "AWESOME" "1" "2024-02-06" "\ \&" "\ \&"
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
+.ss \n[.ss] 0
+.nh
+.ad l
+.de URL
+\fI\\$2\fP <\\$1>\\$3
+..
+.als MTO URL
+.if \n[.g] \{\
+.  mso www.tmac
+.  am URL
+.    ad l
+.  .
+.  am MTO
+.    ad l
+.  .
+.  LINKSTYLE blue R < >
+.\}
+.SH "NOM"
+awesome \- gestionnaire de fenêtres awesome
+.SH "SYNOPSIS"
+.sp
+\fBawesome\fP [\fB\-v\fP | \fB\-\-version\fP] [\fB\-h\fP | \fB\-\-help\fP] [\fB\-c\fP | \fB\-\-config\fP \fIFILE\fP] [\fB\-k\fP | \fB\-\-check\fP] [\fB\-\-search\fP \fIDIRECTORY\fP] [\fB\-a\fP | \fB\-\-no\-argb\fP] [\fB\-r\fP | *\-\-replace]
+.SH "DESCRIPTION"
+.sp
+\fBawesome\fP est un gestionnaire de fenêtres pour X.
+Il gère les fenêtres avec diverses mises en page, par exemple flottante ou juxtaposée.
+Toutes les mises en page peuvent être appliquées dynamiquement, pour
+optimiser l\(cqenvironnement pour l\(cqapplication utilisée et la tâche en cours d\(cqexécution.
+.sp
+Avec la mise en page juxtaposée, les fenêtres sont gérées avec une zone
+maître et une zone d\(cqempilage.
+La zone maître contient les fenêtres qui nécessitent le plus d\(cqattention, tandis que la zone d\(cqempilage contient toutes les autres fenêtres.
+Avec la mise en page flottante, les fenêtres peuvent être redimensionnées et déplacées à la demande. Les fenêtres de dialogue sont toujours gérées d\(cqune manière flottante, quelle que soit la mise en page en cours.
+Les mises en forme spirale ou décroissante sont des modes spéciaux de mise en forme juxtaposée, où la zone d\(cqempilage est présentée en spirale pour la première, ou comme une fractale rectangulaire pour la seconde.
+.sp
+Dans awesome les fenêtres sont groupées en onglets.
+Chaque fenêtre peut être affectée à  un ou plusieurs onglets.
+En sélectionnant plusieurs onglets on peut afficher toutes les fenêtres
+affectées à ces onglets.
+.sp
+\fBawesome\fP peut contenir des petites boîtes graphiques qui peuvent afficher tout ce que vous désirez : tous les onglets disponibles, la mise en page courante, le titre des fenêtres visibles, du texte, etc.
+.SH "OPTIONS"
+.sp
+\fB\-v\fP, \fB\-\-version\fP
+.RS 4
+Affiche la version de awesome sur la sortie standard.
+.RE
+.sp
+\fB\-h\fP, \fB\-\-help\fP
+.RS 4
+Affiche l\(cqaide.
+.RE
+.sp
+\fB\-c\fP, \fB\-\-config\fP \fIFILE\fP
+.RS 4
+    Définit un autre fichier de configuration à la place de
+\fI$XDG_CONFIG_HOME/awesome/rc.lua\fP.
+.RE
+.sp
+\fB\-k\fP, \fB\-\-check\fP
+.RS 4
+Vérifie la syntaxe du fichier de configuration.
+.RE
+.sp
+\fB\-\-search\fP
+.RS 4
+Ajouter un répertoire au chemin de recherche de bibliothèque.
+.RE
+.sp
+\fB\-a\fP, \fB\-\-no\-argb\fP
+.RS 4
+N\(cqutilise pas le codage ARGB.
+.RE
+.sp
+\fB\-m\fP, \fB\-\-screen\fP
+.RS 4
+\fIoff\fP ou \fIon\fP::
+Utiliser "off" pour exécuter le fichier rc.lua avant de créer les écrans.
+.RE
+.sp
+\fB\-r\fP, \fB\-\-replace\fP
+.RS 4
+Remplace le gestionnaire de fenêtres existant.
+.RE
+.SH "ASSOCIATIONS AVEC LA SOURIS (PAR DÉFAUT)"
+.SS "Navigation"
+.sp
+\fBBouton1\fP sur le nom de l\(cqonglet
+.RS 4
+Affiche le contenu de l\(cqonglet.
+.RE
+.sp
+\fBBouton4\fP, \fBBouton5\fP sur le nom de l\(cqonglet
+.RS 4
+Affiche le contenu de l\(cqonglet précédent ou suivant.
+.RE
+.sp
+\fBBouton4\fP, \fBBouton5\fP sur un onglet vide
+.RS 4
+Affiche le contenu de l\(cqonglet précédent ou suivant.
+.RE
+.sp
+\fBBouton1\fP, \fBBouton3\fP, \fBBouton4\fP, \fBBouton5\fP sur le symbole de mise en page
+.RS 4
+Affiche la mise en page précédente ou suivante.
+.RE
+.SS "Changement dans la mise en page"
+.sp
+\fBMod4 + Bouton1\fP sur le nom de l\(cqonglet
+.RS 4
+Déplace la fenêtre courante vers cet onglet.
+.RE
+.sp
+\fBMod4 + Bouton3\fP sur le nom de l\(cqonglet
+.RS 4
+Ajoute ou retire la fenêtre courante à cet onglet.
+.RE
+.sp
+\fBBouton3\fP sur le nom de l\(cqonglet
+.RS 4
+Ajoute ou retire le contenu de cet onglet à la vue courante.
+.RE
+.sp
+\fBMod4 + Bouton1\fP sur la fenêtre courante avec déplacement de la souris
+.RS 4
+Déplace la fenêtre courante sur l\(cqécran.
+.RE
+.sp
+\fBMod4 + Bouton3\fP sur la fenêtre courante avec déplacement de la souris
+.RS 4
+Redimensionne la fenêtre courante sur l\(cqécran.
+.RE
+.SH "ASSOCIATIONS AVEC LES TOUCHES DU CLAVIER (PAR DÉFAUT)"
+.SS "Help"
+.sp
+\fBMod4 + s\fP
+.RS 4
+Show currently assigned key bindings.
+.RE
+.SS "Contrôle du gestionnaire de fenêtres"
+.sp
+\fBMod4 + Contrôle + r\fP
+.RS 4
+Redémarre le gestionnaire de fenêtres \fBawesome\fP.
+.RE
+.sp
+\fBMod4 + Majuscule + q\fP
+.RS 4
+Quitte le gestionnaire de fenêtres \fBawesome\fP.
+.RE
+.sp
+\fBMod4 + r\fP
+.RS 4
+Affiche une invite de ligne de commande dans la barre de statut.
+.RE
+.sp
+\fBMod4 + x\fP
+.RS 4
+Affiche une invite de code lua dans la barre de statut.
+.RE
+.sp
+\fBMod4 + Retour\fP
+.RS 4
+Lance un émulateur de terminal.
+.RE
+.sp
+\fBMod4 + w\fP
+.RS 4
+Ouvre le menu principal.
+.RE
+.SS "Clients"
+.sp
+\fBMod4 + m\fP
+.RS 4
+Maximise la fenêtre de l\(cqapplication.
+.RE
+.sp
+\fBMod4 + n\fP
+.RS 4
+Minimise la fenêtre de l\(cqapplication.
+.RE
+.sp
+\fBMod4 + Control + n\fP
+.RS 4
+Restaure la fenêtre.
+.RE
+.sp
+\fBMod4 + f\fP
+.RS 4
+Affiche la fenêtre de l\(cqapplication en plein écran.
+.RE
+.sp
+\fBMod4 + Majuscule + c\fP
+.RS 4
+Ferme la fenêtre focalisée.
+.RE
+.sp
+\fBMod4 + t\fP
+.RS 4
+Met la fenêtre de l\(cqapplication au premier plan.
+.RE
+.SS "Navigation"
+.sp
+\fBMod4 + j\fP
+.RS 4
+Focalise sur la fenêtre suivante.
+.RE
+.sp
+\fBMod4 + k\fP
+.RS 4
+Focalise sur la fenêtre précédente.
+.RE
+.sp
+\fBMod4 + u\fP
+.RS 4
+Focalise sur la première fenêtre urgente.
+.RE
+.sp
+\fBMod4 + Flèche Gauche\fP
+.RS 4
+Affiche l\(cqonglet précédent.
+.RE
+.sp
+\fBMod4 + Flèche Droite\fP
+.RS 4
+Affiche l\(cqonglet suivant.
+.RE
+.sp
+\fBMod4 + 1\-9\fP
+.RS 4
+Affiche le contenu de l\(cqonglet 1 à 9.
+.RE
+.sp
+\fBMod4 + Contrôle + j\fP
+.RS 4
+Focalise sur l\(cqécran d\(cqaffichage suivant et y déplace la souris.
+.RE
+.sp
+\fBMod4 + Contrôle + k\fP
+.RS 4
+Focalise sur l\(cqécran d\(cqaffichage précédent et y déplace la souris.
+.RE
+.sp
+\fBMod4 + Échappement\fP
+.RS 4
+Affiche l\(cqonglet sélectionné précédemment.
+.RE
+.SS "Layout modification"
+.sp
+\fBMod4 + Majuscule + j\fP
+.RS 4
+Intervertit la fenêtre courante avec la suivante.
+.RE
+.sp
+\fBMod4 + Majuscule + k\fP
+.RS 4
+Intervertit la fenêtre courante avec la précédente.
+.RE
+.sp
+\fBMod4 + o\fP
+.RS 4
+Déplace le client vers l\(cqécran suivant.
+.RE
+.sp
+\fBMod4 + h\fP
+.RS 4
+Diminue la largeur de la fenêtre\-maître de 5%.
+.RE
+.sp
+\fBMod4 + l\fP
+.RS 4
+Augmente la largeur de la fenêtre\-maître de 5%.
+.RE
+.sp
+\fBMod4 + Majuscule + h\fP
+.RS 4
+Augmente de 1 le nombre de fenêtres\-maître.
+.RE
+.sp
+\fBMod4 + Majuscule + l\fP
+.RS 4
+Diminue de 1 le nombre de fenêtres\-maître.
+.RE
+.sp
+\fBMod4 + Contrôle + h\fP
+.RS 4
+Augmente de 1 le nombre de colonnes pour les fenêtres non\-maître.
+.RE
+.sp
+\fBMod4 + Contrôle + l\fP
+.RS 4
+Diminue de 1 le nombre de colonnes pour les fenêtres non\-maître.
+.RE
+.sp
+\fBMod4 + Espace\fP
+.RS 4
+Affiche la mise en page suivante.
+.RE
+.sp
+\fBMod4 + Majuscule + Espace\fP
+.RS 4
+Affiche la mise en page précédente.
+.RE
+.sp
+\fBMod4 + Contrôle + Espace\fP
+.RS 4
+Rend la fenêtre flottante, ou fixe si elle est déjà flottante.
+.RE
+.sp
+\fBMod4 + Contrôle + Retour\fP
+.RS 4
+Intervertit la fenêtre focalisée avec la fenêtre\-maître.
+.RE
+.sp
+\fBMod4 + Contrôle + 1\-9\fP
+.RS 4
+Ajoute ou supprime le contenu de l\(cqonglet 1 à 9 à l\(cqonglet courant.
+.RE
+.sp
+\fBMod4 + Majuscule + 1\-9\fP
+.RS 4
+Déplace la fenêtre courante dans l\(cqonglet 1 à 9.
+.RE
+.sp
+\fBMod4 + Majuscule + Contrôle + 1\-9\fP
+.RS 4
+Ajoute ou retire la fenêtre courante à l\(cqonglet 1 à 9.
+.RE
+.SH "PERSONNALISATION"
+.sp
+\fBawesome\fP peut être personnalisé en créant un fichier spécifique
+\fI$XDG_CONFIG_HOME/awesome/rc.lua\fP.
+.SH "SIGNAUX"
+.sp
+\fBawesome\fP peut être redémarré en lui envoyant un signal SIGHUP.
+.SH "VOIR AUSSI"
+.sp
+\fBawesomerc\fP(5) \fBawesome\-client\fP(1)
+.SH "BOGUES"
+.sp
+Bien sûr il n\(cqy a aucun bogue dans \fBawesome\fP ! Il peut seulement y avoir
+des comportements inattendus...
+.SH "AUTEURS"
+.sp
+Julien Danjou \c
+.MTO "julien\(atdanjou.info" "" ""
+et d\(cqautres personnes.
+.SH "WWW"
+.sp
+.URL "https://awesomewm.org" "" ""
+.SH "TRADUCTION"
+.sp
+Ce document est une traduction, réalisée par Jean\-Luc Duflot
+<jl POING duflot CHEZ laposte POING net> le 20 février 2012.
+.sp
+L\(cqéquipe de traduction a fait le maximum pour réaliser une adaptation
+française de qualité.
+La version anglaise la plus à jour de ce document est toujours consultable via la commande : LANGUAGE=en man awesome.
+N\(cqhésitez pas à signaler à l\(cqauteur ou au traducteur, selon le cas, toute erreur dans cette page de manuel.

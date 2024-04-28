@@ -1,0 +1,101 @@
+'\" t
+.\"     Title: awesomerc
+.\"    Author: [see the "AUTHOR(S)" section]
+.\" Generator: Asciidoctor 2.0.18
+.\"      Date: 2024-02-06
+.\"    Manual: \ \&
+.\"    Source: \ \&
+.\"  Language: English
+.\"
+.TH "AWESOMERC" "5" "2024-02-06" "\ \&" "\ \&"
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
+.ss \n[.ss] 0
+.nh
+.ad l
+.de URL
+\fI\\$2\fP <\\$1>\\$3
+..
+.als MTO URL
+.if \n[.g] \{\
+.  mso www.tmac
+.  am URL
+.    ad l
+.  .
+.  am MTO
+.    ad l
+.  .
+.  LINKSTYLE blue R < >
+.\}
+.SH "NAME"
+awesomerc \- Konfigurationsdatei für den awesome Fenstermanager
+.SH "SYNTAX"
+.sp
+\fBawesome\fP sucht nach einer Konfigurationsdatei in der folgenden Reihenfolge:
+.sp
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.  sp -1
+.  IP \(bu 2.3
+.\}
+$XDG_CONFIG_HOME/awesome/rc.lua
+.RE
+.sp
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.  sp -1
+.  IP \(bu 2.3
+.\}
+$HOME/.config/awesome/rc.lua
+.RE
+.sp
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.  sp -1
+.  IP \(bu 2.3
+.\}
+$XDG_CONFIG_DIRS/awesome/rc.lua
+.RE
+.SH "BESCHREIBUNG"
+.sp
+Die \fBrc.lua\fP Datei beinhaltet Konfigurationen für \fBawesome\fP. Sie kann benutzt werden um das Verhalten und das Aussehen von awesome auf verschiedene Weise zu beeinflussen.
+Die Konfigurationsdatei kann als Lua\-Programm verstanden werden, welches beim Start von \fBawesome\fP ausgeführt wird.
+Hierfür sollte sie die awesome LUA API benutzen, welche im Abschnitt API vorgestellt wird.
+.SH "AWESOME LUA API"
+.sp
+Dokumentationen für die Lua API befinden sich im Verzeichnis luadoc.
+.SH "FARBFORMATIERUNG"
+.sp
+Die Farbformate in \fBawesome\fP sind entweder die Standard X Farbnamen
+(blue, darkblue, lightred, etc) oder eine Hexadezimaldarstellung der Farbe (#rrggbb
+oder #rrggbbaa).
+Bei der Nutzung der Hexadezimaldarstellung kann zudem ein Alpha\-Kanal genutzt werden.
+Dies bedeutet, dass #00ff00 grün zeichnen wird, aber #00ff00aa setzt den Alpha\-Kanal auf \(oqaa\(cq und lässt somit die darunter liegende Farbe durch den grünen Teil durchschimmern.
+.SH "TEXTFORMATERUNG"
+.sp
+Sie können Pango\-Markups in Texten benutzen.
+Dies erlaubt die Formatierung von Texten, welche in einem Widget dargestellt werden.
+Die Pango\-Markup Dokumentation können sie in der Dokumentation zu Pango unter
+.URL "https://developer.gnome.org/pango/stable/pango\-Markup.html" "" ""
+nachlesen.
+.sp
+Ein Pango\-Markup Beispiel: <span weight="bold" foreground="#336699">...</span>.
+.SH "SIEHE AUCH"
+.sp
+awesome(1) awesome\-client(1)
+.SH "AUTOREN"
+.sp
+Geschrieben von Julien Danjou \c
+.MTO "julien\(atdanjou.info" "" "."
+.SH "WWW"
+.sp
+.URL "https://awesomewm.org" "" ""

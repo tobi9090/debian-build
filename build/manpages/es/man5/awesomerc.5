@@ -1,0 +1,111 @@
+'\" t
+.\"     Title: awesomerc
+.\"    Author: [see the "AUTHOR(S)" section]
+.\" Generator: Asciidoctor 2.0.18
+.\"      Date: 2024-02-06
+.\"    Manual: \ \&
+.\"    Source: \ \&
+.\"  Language: English
+.\"
+.TH "AWESOMERC" "5" "2024-02-06" "\ \&" "\ \&"
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
+.ss \n[.ss] 0
+.nh
+.ad l
+.de URL
+\fI\\$2\fP <\\$1>\\$3
+..
+.als MTO URL
+.if \n[.g] \{\
+.  mso www.tmac
+.  am URL
+.    ad l
+.  .
+.  am MTO
+.    ad l
+.  .
+.  LINKSTYLE blue R < >
+.\}
+.SH "NOMBRE"
+awesomerc \- Fichero de configuración para el gestor de ventanas awesome
+.SH "SINOPSIS"
+.sp
+\fBawesome\fP busca un fichero de configuración siguiendo este orden:
+.sp
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.  sp -1
+.  IP \(bu 2.3
+.\}
+$XDG_CONFIG_HOME/awesome/rc.lua
+.RE
+.sp
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.  sp -1
+.  IP \(bu 2.3
+.\}
+$HOME/.config/awesome/rc.lua
+.RE
+.sp
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.  sp -1
+.  IP \(bu 2.3
+.\}
+$XDG_CONFIG_DIRS/awesome/rc.lua
+.RE
+.SH "DESCRIPCIÓN"
+.sp
+El fichero \fBrc.lua\fP contiene la información de configuración de \fBawesome\fP.
+Se utiliza para configurar de diferentes maneras el comportamiento y el
+aspecto del gestor de ventanas. Puede ser entendido como un programa o script
+en Lua que es ejecutado por \fBawesome\fP al iniciarse. Por lo tanto, debe utilizar
+el API Lua de awesome que se describe en la sección API. Este fichero es
+leído al iniciarse el gestor de ventanas.
+.SH "API LUA DE AWESOME"
+.sp
+La documentación de la API Lua se encuentra en el directorio luadoc.
+.SH "FORMATO DE COLOR"
+.sp
+Para especificar un color en \fBawesome\fP se puede utilizar un nombre de color
+estándar de X, o utilizar un color en formato hexadecimal (#rrggbb o
+#rrggbbaa).
+Al utilizar el formato hexadecimal es posible especificar también un canal
+alpha que representa la opacidad: el color #00ff00 se dibujará como verde,
+pero el color #00ff00aa, con un valor de opacidad \(oqaa\(cq se dibujará
+combinando el verde con el color del fondo sobre el que es dibujado.
+.SH "FORMATO DE TEXTO"
+.sp
+Las cadenas de texto permiten utilizar elementos del lenguaje de marcado
+Pango. Esto permite añadir formato a los textos que se visualizan dentro de
+los widgets.
+La documentación relacionada con el lenguaje de marcado Pango se encuentra
+dentro de la documentación de Pango en
+.URL "https://developer.gnome.org/pango/stable/pango\-Markup.html" "" "."
+.sp
+Un ejemplo de lenguaje de marcado Pango:
+<span weight="bold" foreground="#336699">...</span>.
+.SH "VÉASE TAMBIÉN"
+.sp
+awesome(1) awesome\-client(1)
+.SH "AUTORES"
+.sp
+Escrito por Julien Danjou \c
+.MTO "julien\(atdanjou.info" "" "."
+.SH "WWW"
+.sp
+.URL "https://awesomewm.org" "" ""
+.SH "TRADUCCIÓN"
+.sp
+Esta página de manual ha sido traducida por Diego Moreda.

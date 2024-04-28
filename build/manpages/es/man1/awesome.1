@@ -1,0 +1,366 @@
+'\" t
+.\"     Title: awesome
+.\"    Author: [see the "AUTHOR(S)" section]
+.\" Generator: Asciidoctor 2.0.18
+.\"      Date: 2024-02-06
+.\"    Manual: \ \&
+.\"    Source: \ \&
+.\"  Language: English
+.\"
+.TH "AWESOME" "1" "2024-02-06" "\ \&" "\ \&"
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
+.ss \n[.ss] 0
+.nh
+.ad l
+.de URL
+\fI\\$2\fP <\\$1>\\$3
+..
+.als MTO URL
+.if \n[.g] \{\
+.  mso www.tmac
+.  am URL
+.    ad l
+.  .
+.  am MTO
+.    ad l
+.  .
+.  LINKSTYLE blue R < >
+.\}
+.SH "NOMBRE"
+awesome \- gestor de ventanas awesome
+.SH "SINOPSIS"
+.sp
+\fBawesome\fP [\fB\-v\fP | \fB\-\-version\fP] [\fB\-h\fP | \fB\-\-help\fP] [\fB\-c\fP | \fB\-\-config\fP \fIFICHERO\fP] [\fB\-k\fP | \fB\-\-check\fP] [\fB\-\-search\fP \fIDIRECTORIO\fP] [\fB\-a\fP | \fB\-\-no\-argb\fP] [\fB\-r\fP | *\-\-replace]
+.SH "DESCRIPCIÓN"
+.sp
+\fBawesome\fP es un gestor de ventanas para el sistema de ventanas X. Organiza las
+ventanas utilizando diferentes disposiciones o esquemas (layouts), como por
+ejemplo superpuestas o en mosaico. Cualquiera de los esquemas puede ser
+aplicado dinámicamente, optimizando el entorno para la aplicación que se
+esté ejecutando o la tarea que se esté llevando a cabo.
+.sp
+En los esquemas en mosaico la pantalla se divide en un área principal y un
+área de apilamiento. El área principal contiene las ventanas que necesitan
+mayor cantidad de atención, mientras que el área de apilamiento contiene el
+resto de ventanas. En los esquemas flotantes las ventanas pueden ser
+desplazadas y redimensionadas por el usuario sin restricciones. Las ventanas
+de diálogo siempre se consideran flotantes, independientemente del esquema
+que esté aplicado en ese momento. El esquema en espiral y el menguante son
+casos particulares de los esquemas en mosaico, en los que el área de
+apilamiento se organiza, respectivamente, en forma de espiral o dividiéndose
+en rectángulos siguiendo un patrón fractal.
+.sp
+Las ventanas se agrupan por etiquetas en awesome. Cada ventana puede tener una
+o más etiquetas. Al seleccionar una etiqueta se muestran todas las ventanas
+que tienen esa etiqueta.
+.sp
+En \fBawesome\fP se pueden añadir wiboxes que pueden mostrar cualquier valor:
+todas las etiquetas existentes, el esquema que está seleccionado, el título
+de las ventanas visibles, texto, etc.
+.SH "OPCIONES"
+.sp
+\fB\-v\fP, \fB\-\-version\fP
+.RS 4
+Muestra la información de la versión en la salida estándar, y sale del programa.
+.RE
+.sp
+\fB\-h\fP, \fB\-\-help\fP
+.RS 4
+Muestra información de ayuda, y sale del programa.
+.RE
+.sp
+\fB\-c\fP, \fB\-\-config\fP \fIFICHERO\fP
+.RS 4
+    Utiliza un fichero de configuración alternativo en lugar de
+\fI$XDG_CONFIG_HOME/awesome/rc.lua\fP.
+.RE
+.sp
+\fB\-k\fP, \fB\-\-check\fP
+.RS 4
+Verifica la sintaxis del archivo de configuración.
+.RE
+.sp
+\fB\-\-search\fP
+.RS 4
+Añadir un directorio a la ruta de búsqueda de biblioteca.
+.RE
+.sp
+\fB\-a\fP, \fB\-\-no\-argb\fP
+.RS 4
+No utilice colores ARGB.
+.RE
+.sp
+\fB\-r\fP, \fB\-\-replace\fP
+.RS 4
+Replace an existing window manager.
+.RE
+.SH "ATAJOS DE RATÓN POR OMISIÓN"
+.SS "Navegación"
+.sp
+\fBBotón1\fP en el nombre de una etiqueta
+.RS 4
+Muestra las ventanas con esa etiqueta.
+.RE
+.sp
+\fBBotón4\fP, \fBBotón5\fP en el nombre de una etiqueta
+.RS 4
+Cambia a la etiqueta anterior o siguiente.
+.RE
+.sp
+\fBBotón4\fP, \fBBotón5\fP en la ventana de fondo
+.RS 4
+Cambia a la etiqueta anterior o siguiente.
+.RE
+.sp
+\fBButton1\fP, \fBButton3\fP, \fBButton4\fP, \fBButton5\fP en el símbolo de esquema
+.RS 4
+Cambia al esquema anterior o siguiente.
+.RE
+.SS "Modificación del esquema"
+.sp
+\fBMod4 + Botón1\fP en el nombre de una etiqueta
+.RS 4
+Etiqueta al cliente actual únicamente con esa etiqueta.
+.RE
+.sp
+\fBMod4 + Botón\fP en el nombre de una etiqueta
+.RS 4
+Activa o desactiva esa etiqueta para el cliente actual.
+.RE
+.sp
+\fBBotón3\fP en el nombre de una etiqueta
+.RS 4
+Añade el contenido de esa etiqueta a la vista actual.
+.RE
+.sp
+\fBMod4 + Botón1\fP en una ventana cliente
+.RS 4
+Mueve la ventana.
+.RE
+.sp
+\fBMod4 + Botón3\fP en una ventana cliente
+.RS 4
+Redimensiona la ventana.
+.RE
+.SH "ATAJOS DE TECLADO POR OMISIÓN"
+.SS "Help"
+.sp
+\fBMod4 + s\fP
+.RS 4
+Show currently assigned key bindings.
+.RE
+.SS "Control del gestor de ventanas"
+.sp
+\fBMod4 + Control + r\fP
+.RS 4
+Reinicia \fBawesome\fP.
+.RE
+.sp
+\fBMod4 + Mayús + q\fP
+.RS 4
+Sale de \fBawesome\fP.
+.RE
+.sp
+\fBMod4 + r\fP
+.RS 4
+Ejecuta una línea de comandos en la barra de estado.
+.RE
+.sp
+\fBMod4 + x\fP
+.RS 4
+Ejecuta una línea de comandos de Lua en la barra de estado.
+.RE
+.sp
+\fBMod4 + Intro\fP
+.RS 4
+Lanza una instancia del emulador de terminal.
+.RE
+.sp
+\fBMod4 + w\fP
+.RS 4
+Despliega el menú principal.
+.RE
+.SS "Clientes"
+.sp
+\fBMod4 + m\fP
+.RS 4
+Maximiza el cliente actual.
+.RE
+.sp
+\fBMod4 + n\fP
+.RS 4
+Minimiza el cliente actual.
+.RE
+.sp
+\fBMod4 + Control + n\fP
+.RS 4
+Restaurar el cliente.
+.RE
+.sp
+\fBMod4 + f\fP
+.RS 4
+Activa o desactiva el modo de pantalla completa para el cliente actual.
+.RE
+.sp
+\fBMod4 + Mayús + c\fP
+.RS 4
+Termina (kill) el cliente actual.
+.RE
+.sp
+\fBMod4 + t\fP
+.RS 4
+Activa o desactiva el modo "siempre visible" para el cliente actual.
+.RE
+.SS "Navegación"
+.sp
+\fBMod4 + j\fP
+.RS 4
+Establece el foco sobre el cliente siguiente.
+.RE
+.sp
+\fBMod4 + k\fP
+.RS 4
+Establece el foco sobre el cliente anterior.
+.RE
+.sp
+\fBMod4 + u\fP
+.RS 4
+Establece el foco sobre el primer cliente urgente.
+.RE
+.sp
+\fBMod4 + Left\fP
+.RS 4
+Muestra la etiqueta anterior.
+.RE
+.sp
+\fBMod4 + Right\fP
+.RS 4
+Muestra la etiqueta siguiente.
+.RE
+.sp
+\fBMod4 + 1\-9\fP
+.RS 4
+Muestra los contenidos de la etiqueta 1\-9.
+.RE
+.sp
+\fBMod4 + Control + j\fP
+.RS 4
+Establece el foco en la pantalla siguiente.
+.RE
+.sp
+\fBMod4 + Control + k\fP
+.RS 4
+Establece el foco en la pantalla anterior.
+.RE
+.sp
+\fBMod4 + Escape\fP
+.RS 4
+Establece el foco en el conjunto de etiquetas seleccionado anteriormente.
+.RE
+.SS "Modificación del esquema"
+.sp
+\fBMod4 + Mayús + j\fP
+.RS 4
+Intercambia el cliente actual con el cliente siguiente.
+.RE
+.sp
+\fBMod4 + Mayús + k\fP
+.RS 4
+Intercambia el cliente actual con el cliente anterior.
+.RE
+.sp
+\fBMod4 + o\fP
+.RS 4
+Envía el cliente a la pantalla siguiente.
+.RE
+.sp
+\fBMod4 + h\fP
+.RS 4
+Decrementa la anchura del área principal en un 5%.
+.RE
+.sp
+\fBMod4 + l\fP
+.RS 4
+Incrementa la anchura del área principal en un 5%.
+.RE
+.sp
+\fBMod4 + Mayús + h\fP
+.RS 4
+Incrementa el número de ventanas en el área principal en 1.
+.RE
+.sp
+\fBMod4 + Mayús + l\fP
+.RS 4
+Decrementa el número de ventanas en el área principal en 1.
+.RE
+.sp
+\fBMod4 + Control + h\fP
+.RS 4
+Incrementa el número de columnas en el área de apilamiento en 1.
+.RE
+.sp
+\fBMod4 + Control + l\fP
+.RS 4
+Decrementa el número de columnas en el área de apilamiento en 1.
+.RE
+.sp
+\fBMod4 + space\fP
+.RS 4
+Cambia al esquema siguiente.
+.RE
+.sp
+\fBMod4 + Mayús + espacio\fP
+.RS 4
+Cambia al esquema anterior.
+.RE
+.sp
+\fBMod4 + Control + espacio\fP
+.RS 4
+Activa o desactiva el estado flotante del cliente actual
+.RE
+.sp
+\fBMod4 + Control + Intro\fP
+.RS 4
+Intercambia el cliente actual con el cliente en el área principal
+.RE
+.sp
+\fBMod4 + Control + 1\-9\fP
+.RS 4
+Activa o desactiva la vista de la etiqueta 1\-9.
+.RE
+.sp
+\fBMod4 + Mayús + 1\-9\fP
+.RS 4
+Etiqueta al cliente actual con la etiqueta 1\-9.
+.RE
+.sp
+\fBMod4 + Mayús + Control + 1\-9\fP
+.RS 4
+Activa o desactiva la etiqueta 1\-9 para el cliente actual.
+.RE
+.SH "PERSONALIZACIÓN"
+.sp
+\fBawesome\fP se configura creando un fichero \fI$XDG_CONFIG_HOME/awesome/rc.lua\fP
+personalizado.
+.SH "SEÑALES"
+.sp
+La señal SIGHUP provoca que \fBawesome\fP se reinicie.
+.SH "VÉASE TAMBIÉN"
+.sp
+\fBawesomerc\fP(5) \fBawesome\-client\fP(1)
+.SH "FALLOS"
+.sp
+Por supuesto, \fBawesome\fP no tiene fallos. Pero es posible que tenga
+comportamientos inesperados.
+.SH "AUTORES"
+.sp
+Julien Danjou \c
+.MTO "julien\(atdanjou.info" "" ""
+y otros.
+.SH "WWW"
+.sp
+.URL "https://awesomewm.org" "" ""
+.SH "TRADUCCIÓN"
+.sp
+Esta página de manual ha sido traducida por Diego Moreda.

@@ -1,0 +1,94 @@
+'\" t
+.\"     Title: awesome-client
+.\"    Author: [see the "AUTHOR(S)" section]
+.\" Generator: Asciidoctor 2.0.18
+.\"      Date: 2024-02-06
+.\"    Manual: \ \&
+.\"    Source: \ \&
+.\"  Language: English
+.\"
+.TH "AWESOME\-CLIENT" "1" "2024-02-06" "\ \&" "\ \&"
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
+.ss \n[.ss] 0
+.nh
+.ad l
+.de URL
+\fI\\$2\fP <\\$1>\\$3
+..
+.als MTO URL
+.if \n[.g] \{\
+.  mso www.tmac
+.  am URL
+.    ad l
+.  .
+.  am MTO
+.    ad l
+.  .
+.  LINKSTYLE blue R < >
+.\}
+.SH "ИМЯ"
+awesome-client \- удалённое управление потрясающим оконным менеджером
+.SH "СИНОПСИС"
+.sp
+awesome\-client [\-h|\-\-help] [command [command...]]
+.SH "ОПИСАНИЕ"
+.sp
+awesome\-client — это инструмент для командной строки для удалённого выполнения
+команд в awesome. Он общается с awesome через D\-Bus для удалённого выполнения
+произвольного Lua\-кода.
+.SH "ИСПОЛЬЗОВАНИЕ"
+.sp
+awesome\-client читает команды из стандартного входа и посылает их на выполнения
+awesome через D\-Bus. Если установлен «rlwrap», то он будет использован для
+предоставление командного интерфейса с помощью readline.
+.sp
+В awesome должен быть загружен модуль «awful.remote», чтобы позволить удалённое
+выполнение кода.
+.SH "ПРИМЕРЫ"
+.sp
+.if n .RS 4
+.nf
+.fam C
+$ awesome\-client \*(Aqreturn 1+1, "Hello, world"\*(Aq
+   double 2
+   string "Hello, world"
+
+# Следующий пример не возвращает ничего в командную строку,
+# но показывает уведомление.
+$ awesome\-client \*(Aq
+  naughty = require("naughty")
+  naughty.notify({
+  title="CLI Notification",
+  text="Это уведомление было отправлено из командной строки!"})
+\*(Aq
+
+# Интерактивный режим (REPL)
+# В данном режиме каждая строка введенная пользователем
+# будет отправлена в awesome wm, точно так же, как если бы несколько команд
+# были бы переданы как аргументы командной строки.
+$ awesome\-client
+awesome# return 1+1
+   double 2
+awesome# return 1+1, "Hello, world"
+   double 2
+   string "Hello, world"
+awesome#
+.fam
+.fi
+.if n .RE
+.SH "СМОТРИ ТАКЖЕ"
+.sp
+awesome(1) awesomerc(5)
+.SH "АВТОРЫ"
+.sp
+Julien Danjou \c
+.MTO "julien\(atdanjou.info" "" ""
+.SH "WWW"
+.sp
+.URL "https://awesomewm.org" "" ""
+.SH "ПЕРЕВОД"
+.sp
+Это руководство переведено на русский язык Константином Степановым \c
+.MTO "kstep\(atp\-nut.info" "" ""
+13 апреля 2011 года.
